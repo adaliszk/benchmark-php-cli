@@ -1,0 +1,8 @@
+FROM phpearth/php:7.0-cli
+RUN apk add --no-cache bash coreutils
+
+ADD ./scripts /srv
+ADD ./benchmark /opt/benchmark
+RUN chmod +x /opt/benchmark
+
+CMD ["bash","/opt/benchmark","minimal-echo"]
