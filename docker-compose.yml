@@ -5,7 +5,7 @@ services:
   php70-minimal:
     container_name: php70-minimal
     build:
-      dockerfile: Dockerfile.7.0-min
+      dockerfile: Dockerfile-70-min
       context: .
     volumes:
       - "./scripts:/srv"
@@ -13,7 +13,7 @@ services:
   php70-complete:
     container_name: php70-complete
     build:
-      dockerfile: Dockerfile.7.0
+      dockerfile: Dockerfile-70
       context: .
     volumes:
       - "./scripts:/srv"
@@ -21,7 +21,7 @@ services:
   php71-minimal:
     container_name: php71-minimal
     build:
-      dockerfile: Dockerfile.7.1-min
+      dockerfile: Dockerfile-71-min
       context: .
     volumes:
       - "./scripts:/srv"
@@ -29,7 +29,7 @@ services:
   php71-complete:
     container_name: php71-complete
     build:
-      dockerfile: Dockerfile.7.1
+      dockerfile: Dockerfile-71
       context: .
     volumes:
       - "./scripts:/srv"
@@ -37,7 +37,7 @@ services:
   php72-minimal:
     container_name: php72-minimal
     build:
-      dockerfile: Dockerfile.7.2-min
+      dockerfile: Dockerfile-72-min
       context: .
     volumes:
       - "./scripts:/srv"
@@ -45,7 +45,7 @@ services:
   php72-complete:
     container_name: php72-complete
     build:
-      dockerfile: Dockerfile.7.2
+      dockerfile: Dockerfile-72
       context: .
     volumes:
       - "./scripts:/srv"
