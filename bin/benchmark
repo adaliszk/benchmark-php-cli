@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+/usr/bin/php -m > "/out/$CONTAINER_NAME-modules"
+
+FILES=/srv/*.php
+for file in $FILES
+do
+	filename="${file##*/}"
+	basename="${filename%.*}"
+
+	echo "Benchmarking $basename script..."
+	/opt/mesure $basename > "/out/$CONTAINER_NAME-$basename"
+done
+

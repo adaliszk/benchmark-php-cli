@@ -1,8 +1,0 @@
-MYSQL_RANDOM_ROOT_PASSWORD=yes
-MYSQL_DATABASE=cli_test
-MYSQL_USER=cli_test
-MYSQL_PASSWORD=cli_test
-
-DB_NAME=cli_test
-DB_USER=cli_test
-DB_PASS=cli_test

@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-/usr/bin/php -m | paste -sd " " - | awk '{print toupper($0)}'
-
-echo "Benchmarking $1 script..."
-time for a in {1..10000}; do
-    /usr/bin/php /srv/$1.php > /dev/null;
-done

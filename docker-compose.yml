@@ -4,48 +4,78 @@ services:
 
   php70-minimal:
     container_name: php70-minimal
+    environment:
+      - CONTAINER_NAME=php70-minimal
     build:
       dockerfile: Dockerfile-70-min
       context: .
     volumes:
+      - "./bin:/opt"
       - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
 
   php70-complete:
     container_name: php70-complete
+    environment:
+      - CONTAINER_NAME=php70-complete
     build:
       dockerfile: Dockerfile-70
       context: .
     volumes:
+      - "./bin:/opt"
       - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
 
   php71-minimal:
     container_name: php71-minimal
+    environment:
+      - CONTAINER_NAME=php71-minimal
     build:
       dockerfile: Dockerfile-71-min
       context: .
     volumes:
+      - "./bin:/opt"
       - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
 
   php71-complete:
     container_name: php71-complete
+    environment:
+      - CONTAINER_NAME=php71-complete
     build:
       dockerfile: Dockerfile-71
       context: .
     volumes:
+      - "./bin:/opt"
       - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
 
   php72-minimal:
     container_name: php72-minimal
+    environment:
+      - CONTAINER_NAME=php72-minimal
     build:
       dockerfile: Dockerfile-72-min
       context: .
     volumes:
+      - "./bin:/opt"
       - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
 
   php72-complete:
     container_name: php72-complete
+    environment:
+      - CONTAINER_NAME=php72-complete
     build:
       dockerfile: Dockerfile-72
       context: .
     volumes:
+      - "./bin:/opt"
       - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"

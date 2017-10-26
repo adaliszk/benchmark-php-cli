@@ -17,3 +17,5 @@ docker-compose up --build php72-minimal
 
 echo "[Minimal-Echo] Run PHP 7.2 Complete"
 docker-compose up --build php72-complete
+
+chmod 777 -R ./output
