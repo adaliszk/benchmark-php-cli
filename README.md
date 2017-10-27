@@ -5,4 +5,8 @@ The test itself really simple, I track the elapsed time with linux `time` comman
 
 > My testing machine has a `Intel® Core™ i7-7700K CPU @ 4.20GHz × 8`, `2 × 16GB HyperX RAM @ 2400Mhz` and the storage is a `HiperX SSD with M.2.` connection.
 
-Results SOON?
+## Minimal Echo
+The simpliest echo possible
+
+![Elapsed Time](https://github.com/adaliszk/benchmark-php-cli/blob/master/et_minimal-echo.png?raw=true)
+![Process per Second](https://github.com/adaliszk/benchmark-php-cli/blob/master/pps_minimal-echo.png?raw=true)
