@@ -28,7 +28,7 @@ foreach ($rows as $rowContent)
 	$seconds += $timeParts[0]*60;
 	$seconds += $timeParts[1];
 	
-	$$key[] = $seconds/10;
+	$$key[] = $seconds;
 }
 
 $min = min($real);
