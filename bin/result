@@ -1,0 +1,41 @@
+#!/usr/bin/env php
+<?php
+
+$script_name = $argv[1];
+$container_name = getenv('CONTAINER_NAME');
+$mesurmentFile = "/out/$container_name-$script_name";
+
+$real = [];
+$user = [];
+$sys = [];
+
+$mesurmentContent = file_get_contents($mesurmentFile);
+$rows = explode("\n", $mesurmentContent);
+
+foreach ($rows as $rowContent)
+{
+	if (empty($rowContent)) continue;
+	
+	$rowData = explode(':', $rowContent);
+	$key = $rowData[0];
+	$value = $rowData[1];
+	
+	$seconds = 0;
+	
+	$time = str_replace('s','', $value);
+	$timeParts = explode('m', $time);
+		
+	$seconds += $timeParts[0]*60;
+	$seconds += $timeParts[1];
+	
+	$$key[] = $seconds/10;
+}
+
+$min = min($real);
+$max = max($real);
+$avg = array_sum($real)/count($real);
+
+$resultJson = "{\"min\":{$min},\"max\":{$max},\"avg\":{$avg}}";
+
+echo $resultJson . PHP_EOL;
+file_put_contents("/opt/$container_name-$script_name.json", $resultJson);

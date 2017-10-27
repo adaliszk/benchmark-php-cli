@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 
-/usr/bin/php -m > "/out/$CONTAINER_NAME-modules"
+/usr/bin/php -r 'file_put_contents("/out/".getenv("CONTAINER_NAME")."-modules", strtoupper(implode(",", get_loaded_extensions())));'
+modules=$(cat "/out/$CONTAINER_NAME-modules")
+printf "Configuration: $modules\n"
 
-FILES=/srv/*.php
-for file in $FILES
+scripts=/srv/*.php
+for file in $scripts
 do
 	filename="${file##*/}"
 	basename="${filename%.*}"
 
-	echo "Benchmarking $basename script..."
-	/opt/mesure $basename > "/out/$CONTAINER_NAME-$basename"
+	printf "\nBenchmarking $basename...\n"
+	rm "/out/$CONTAINER_NAME-$basename"
+	/opt/mesure $basename
+	
+	printf "\nGenerating result for $basename...\n"
+	/opt/result $basename
 done
-
