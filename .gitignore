@@ -1,5 +1,2 @@
-/output/*
-!/output/.gitkeep
-
 /temp/*
 !/temp/.gitkeep
