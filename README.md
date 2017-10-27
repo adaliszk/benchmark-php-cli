@@ -8,5 +8,5 @@ The test itself really simple, I track the elapsed time with linux `time` comman
 ## Minimal Echo
 The simpliest echo possible
 
-![Elapsed Time](https://github.com/adaliszk/benchmark-php-cli/blob/master/et_minimal-echo.png?raw=true)
-![Process per Second](https://github.com/adaliszk/benchmark-php-cli/blob/master/pps_minimal-echo.png?raw=true)
+![Elapsed Time](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/et_minimal-echo.png?raw=true)
+![Process per Second](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/pps_minimal-echo.png?raw=true)
