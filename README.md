@@ -1,3 +1,6 @@
+[![Docker Automated build](https://img.shields.io/docker/automated/adaliszk/benchmark-php-cli.svg)](https://hub.docker.com/r/adaliszk/php-cli-benchmark/)
+[![GitHub license](https://img.shields.io/github/license/adaliszk/benchmark-php-cli.svg)](https://github.com/adaliszk/benchmark-php-cli/LICENSE.md)
+
 # Benchmark: PHP CLI (\w Docker Images)
 Just a simple tester to check different php versions and installed modules how's effect the minimal possible script runtime. The test itself really simple, I track the elapsed time with linux `time` command on various scripts in the scripts folder.
 
