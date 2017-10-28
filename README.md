@@ -38,7 +38,7 @@ Everytime if the [benchmark](bin/benchmark) script runs it will look into the `/
 The simpliest echo possible with the whole boot-time of the PHP intrepreter.
 
 ![Elapsed Time](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/et_minimal-echo.png?raw=true)  
-
+  
 ![Process per Second](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/pps_minimal-echo.png?raw=true)  
 
 
