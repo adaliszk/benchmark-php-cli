@@ -1,1 +1,11 @@
-CORE,PHPDBG_WEBHELPER,DATE,LIBXML,PCRE,FILTER,HASH,READLINE,REFLECTION,SPL,STANDARD
+Core
+phpdbg_webhelper
+date
+libxml
+pcre
+filter
+hash
+readline
+Reflection
+SPL
+standard

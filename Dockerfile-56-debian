@@ -1,0 +1,9 @@
+FROM php:5.6-cli
+RUN apt-get install bash coreutils
+
+ADD ./bin /opt
+ADD ./scripts /srv
+
+RUN chmod 777 /opt && chmod 777 /srv && mkdir /out && chmod 777 /out
+
+CMD ["bash","/opt/benchmark","minimal-echo"]

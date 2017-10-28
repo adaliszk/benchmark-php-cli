@@ -2,6 +2,97 @@ version: "2"
 
 services:
 
+  php56-alpine-skratch:
+    container_name: php56-alpine-skratch
+    environment:
+      - CONTAINER_NAME=php56-alpine-skratch
+    build:
+      dockerfile: Dockerfile-56-alpine-skratch
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php56-alpine:
+    container_name: php56-alpine
+    environment:
+      - CONTAINER_NAME=php56-alpine
+    build:
+      dockerfile: Dockerfile-56-alpine
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php56-debian:
+    container_name: php56-debian
+    environment:
+      - CONTAINER_NAME=php56-debian
+    build:
+      dockerfile: Dockerfile-56-debian
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+  
+  php56-debian-skratch:
+    container_name: php56-debian-skratch
+    environment:
+      - CONTAINER_NAME=php56-debian-skratch
+    build:
+      dockerfile: Dockerfile-56-debian-skratch
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php56-ubuntu:
+    container_name: php56-ubuntu
+    environment:
+      - CONTAINER_NAME=php56-ubuntu
+    build:
+      dockerfile: Dockerfile-56-ubuntu
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php70-alpine-skratch:
+    container_name: php70-alpine-skratch
+    environment:
+      - CONTAINER_NAME=php70-alpine-skratch
+    build:
+      dockerfile: Dockerfile-70-alpine-skratch
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+      
+  php70-alpine:
+    container_name: php70-alpine
+    environment:
+      - CONTAINER_NAME=php70-alpine
+    build:
+      dockerfile: Dockerfile-70-alpine
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
   php70-minimal:
     container_name: php70-minimal
     environment:
@@ -15,6 +106,45 @@ services:
       - "./output:/out"
       - "./temp:/tmp"
 
+  php70-debian:
+    container_name: php70-debian
+    environment:
+      - CONTAINER_NAME=php70-debian
+    build:
+      dockerfile: Dockerfile-70-debian
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php70-debian-skratch:
+    container_name: php70-debian-skratch
+    environment:
+      - CONTAINER_NAME=php70-debian-skratch
+    build:
+      dockerfile: Dockerfile-70-debian-skratch
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php70-ubuntu:
+    container_name: php70-ubuntu
+    environment:
+      - CONTAINER_NAME=php70-ubuntu
+    build:
+      dockerfile: Dockerfile-70-ubuntu
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+      
   php70-complete:
     container_name: php70-complete
     environment:
@@ -28,12 +158,77 @@ services:
       - "./output:/out"
       - "./temp:/tmp"
 
+  php71-alpine:
+    container_name: php71-alpine
+    environment:
+      - CONTAINER_NAME=php71-alpine
+    build:
+      dockerfile: Dockerfile-71-alpine
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php71-alpine-skratch:
+    container_name: php71-alpine-skratch
+    environment:
+      - CONTAINER_NAME=php71-alpine-skratch
+    build:
+      dockerfile: Dockerfile-71-alpine-skratch
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
   php71-minimal:
     container_name: php71-minimal
     environment:
       - CONTAINER_NAME=php71-minimal
     build:
       dockerfile: Dockerfile-71-min
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php71-debian:
+    container_name: php71-debian
+    environment:
+      - CONTAINER_NAME=php71-debian
+    build:
+      dockerfile: Dockerfile-71-debian
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php71-debian-skratch:
+    container_name: php71-debian-skratch
+    environment:
+      - CONTAINER_NAME=php71-debian-skratch
+    build:
+      dockerfile: Dockerfile-71-debian-skratch
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php71-ubuntu:
+    container_name: php71-ubuntu
+    environment:
+      - CONTAINER_NAME=php71-ubuntu
+    build:
+      dockerfile: Dockerfile-71-ubuntu
       context: .
     volumes:
       - "./bin:/opt"
@@ -60,6 +255,32 @@ services:
       - CONTAINER_NAME=php72-minimal
     build:
       dockerfile: Dockerfile-72-min
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php72-debian:
+    container_name: php72-debian
+    environment:
+      - CONTAINER_NAME=php72-debian
+    build:
+      dockerfile: Dockerfile-72-debian
+      context: .
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  php72-alpine:
+    container_name: php72-alpine
+    environment:
+      - CONTAINER_NAME=php72-alpine
+    build:
+      dockerfile: Dockerfile-72-alpine
       context: .
     volumes:
       - "./bin:/opt"
