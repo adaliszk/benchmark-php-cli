@@ -5,7 +5,7 @@ services:
   php56-alpine-skratch:
     container_name: php56-alpine-skratch
     environment:
-      - CONTAINER_NAME=php56-alpine-skratch
+      - CONTAINER_NAME=56-alpine-skratch
     build:
       dockerfile: Dockerfile-56-alpine-skratch
       context: .
@@ -18,7 +18,7 @@ services:
   php56-alpine:
     container_name: php56-alpine
     environment:
-      - CONTAINER_NAME=php56-alpine
+      - CONTAINER_NAME=56-alpine
     build:
       dockerfile: Dockerfile-56-alpine
       context: .
@@ -31,7 +31,7 @@ services:
   php56-debian:
     container_name: php56-debian
     environment:
-      - CONTAINER_NAME=php56-debian
+      - CONTAINER_NAME=56-debian
     build:
       dockerfile: Dockerfile-56-debian
       context: .
@@ -44,7 +44,7 @@ services:
   php56-debian-skratch:
     container_name: php56-debian-skratch
     environment:
-      - CONTAINER_NAME=php56-debian-skratch
+      - CONTAINER_NAME=56-debian-skratch
     build:
       dockerfile: Dockerfile-56-debian-skratch
       context: .
@@ -57,7 +57,7 @@ services:
   php56-ubuntu:
     container_name: php56-ubuntu
     environment:
-      - CONTAINER_NAME=php56-ubuntu
+      - CONTAINER_NAME=56-ubuntu
     build:
       dockerfile: Dockerfile-56-ubuntu
       context: .
@@ -70,7 +70,7 @@ services:
   php70-alpine-skratch:
     container_name: php70-alpine-skratch
     environment:
-      - CONTAINER_NAME=php70-alpine-skratch
+      - CONTAINER_NAME=70-alpine-skratch
     build:
       dockerfile: Dockerfile-70-alpine-skratch
       context: .
@@ -83,7 +83,7 @@ services:
   php70-alpine:
     container_name: php70-alpine
     environment:
-      - CONTAINER_NAME=php70-alpine
+      - CONTAINER_NAME=70-alpine
     build:
       dockerfile: Dockerfile-70-alpine
       context: .
@@ -96,7 +96,7 @@ services:
   php70-minimal:
     container_name: php70-minimal
     environment:
-      - CONTAINER_NAME=php70-minimal
+      - CONTAINER_NAME=70-minimal
     build:
       dockerfile: Dockerfile-70-min
       context: .
@@ -109,7 +109,7 @@ services:
   php70-debian:
     container_name: php70-debian
     environment:
-      - CONTAINER_NAME=php70-debian
+      - CONTAINER_NAME=70-debian
     build:
       dockerfile: Dockerfile-70-debian
       context: .
@@ -122,7 +122,7 @@ services:
   php70-debian-skratch:
     container_name: php70-debian-skratch
     environment:
-      - CONTAINER_NAME=php70-debian-skratch
+      - CONTAINER_NAME=70-debian-skratch
     build:
       dockerfile: Dockerfile-70-debian-skratch
       context: .
@@ -135,7 +135,7 @@ services:
   php70-ubuntu:
     container_name: php70-ubuntu
     environment:
-      - CONTAINER_NAME=php70-ubuntu
+      - CONTAINER_NAME=70-ubuntu
     build:
       dockerfile: Dockerfile-70-ubuntu
       context: .
@@ -148,7 +148,7 @@ services:
   php70-complete:
     container_name: php70-complete
     environment:
-      - CONTAINER_NAME=php70-complete
+      - CONTAINER_NAME=70-complete
     build:
       dockerfile: Dockerfile-70
       context: .
@@ -161,7 +161,7 @@ services:
   php71-alpine:
     container_name: php71-alpine
     environment:
-      - CONTAINER_NAME=php71-alpine
+      - CONTAINER_NAME=71-alpine
     build:
       dockerfile: Dockerfile-71-alpine
       context: .
@@ -174,7 +174,7 @@ services:
   php71-alpine-skratch:
     container_name: php71-alpine-skratch
     environment:
-      - CONTAINER_NAME=php71-alpine-skratch
+      - CONTAINER_NAME=71-alpine-skratch
     build:
       dockerfile: Dockerfile-71-alpine-skratch
       context: .
@@ -187,7 +187,7 @@ services:
   php71-minimal:
     container_name: php71-minimal
     environment:
-      - CONTAINER_NAME=php71-minimal
+      - CONTAINER_NAME=71-minimal
     build:
       dockerfile: Dockerfile-71-min
       context: .
@@ -200,7 +200,7 @@ services:
   php71-debian:
     container_name: php71-debian
     environment:
-      - CONTAINER_NAME=php71-debian
+      - CONTAINER_NAME=71-debian
     build:
       dockerfile: Dockerfile-71-debian
       context: .
@@ -213,7 +213,7 @@ services:
   php71-debian-skratch:
     container_name: php71-debian-skratch
     environment:
-      - CONTAINER_NAME=php71-debian-skratch
+      - CONTAINER_NAME=71-debian-skratch
     build:
       dockerfile: Dockerfile-71-debian-skratch
       context: .
@@ -226,7 +226,7 @@ services:
   php71-ubuntu:
     container_name: php71-ubuntu
     environment:
-      - CONTAINER_NAME=php71-ubuntu
+      - CONTAINER_NAME=71-ubuntu
     build:
       dockerfile: Dockerfile-71-ubuntu
       context: .
@@ -239,7 +239,7 @@ services:
   php71-complete:
     container_name: php71-complete
     environment:
-      - CONTAINER_NAME=php71-complete
+      - CONTAINER_NAME=71-complete
     build:
       dockerfile: Dockerfile-71
       context: .
@@ -252,7 +252,7 @@ services:
   php72-minimal:
     container_name: php72-minimal
     environment:
-      - CONTAINER_NAME=php72-minimal
+      - CONTAINER_NAME=72-minimal
     build:
       dockerfile: Dockerfile-72-min
       context: .
@@ -265,7 +265,7 @@ services:
   php72-debian:
     container_name: php72-debian
     environment:
-      - CONTAINER_NAME=php72-debian
+      - CONTAINER_NAME=72-debian
     build:
       dockerfile: Dockerfile-72-debian
       context: .
@@ -278,7 +278,7 @@ services:
   php72-alpine:
     container_name: php72-alpine
     environment:
-      - CONTAINER_NAME=php72-alpine
+      - CONTAINER_NAME=72-alpine
     build:
       dockerfile: Dockerfile-72-alpine
       context: .
@@ -291,7 +291,7 @@ services:
   php72-complete:
     container_name: php72-complete
     environment:
-      - CONTAINER_NAME=php72-complete
+      - CONTAINER_NAME=72-complete
     build:
       dockerfile: Dockerfile-72
       context: .
