@@ -36,11 +36,14 @@ Just a simple test to check different php versions and installed modules how's e
 > Note: The 7.2 is an RC release, multiple images may not perform as it would with a stable release!
 
 ## Tests
-Everytime if the [benchmark](benchmark) script runs it will look into the `/srv` and run every php scripts in there. Later I will add more tests and detailed results, but for now here are some charts:
+Everytime if the [benchmark](bin/benchmark) script runs it will look into the `/srv` and run every php scripts in there. Later I will add more tests and detailed results, but for now here are some charts:
 
 ### Minimal Echo
 The simpliest echo possible with the whole boot-time of the PHP intrepreter.
 
-![Elapsed Time](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/et_minimal-echo.png?raw=true)
-![Process per Second](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/pps_minimal-echo.png?raw=true)
+![Elapsed Time](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/et_minimal-echo.png?raw=true)  
+
+![Process per Second](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/pps_minimal-echo.png?raw=true)  
+
+
 
