@@ -5,4 +5,4 @@ ADD ./scripts /srv
 
 RUN chmod 777 /opt && chmod 777 /srv && mkdir /out && chmod 777 /out
 
-CMD ["bash","/opt/benchmark","minimal-echo"]
+CMD ["bash","/opt/benchmark"]

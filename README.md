@@ -1,5 +1,5 @@
-# Benchmark: PHP CLI (Docker Images)
-Just a simple test to check different php versions and installed modules how's effect the minimal possible script runtime. The test itself really simple, I track the elapsed time with linux `time` command on various scripts in the scripts folder. My testing machine has a `Intel® Core™ i7-7700K CPU @ 4.20GHz × 8` CPU and `2 × 16GB HyperX RAM @ 2400Mhz` RAM, the storage is a `HiperX SSD` with `M.2` connection.
+# Benchmark: PHP CLI (\w Docker Images)
+Just a simple tester to check different php versions and installed modules how's effect the minimal possible script runtime. The test itself really simple, I track the elapsed time with linux `time` command on various scripts in the scripts folder.
 
 ## Testing Environments
 
@@ -32,7 +32,7 @@ Just a simple test to check different php versions and installed modules how's e
 > Note: The 7.2 is an RC release, multiple images may not perform as it would with a stable release!
 
 ## Tests
-Everytime if the [benchmark](bin/benchmark) script runs it will look into the `/srv` and run every php scripts in there. Later I will add more tests and detailed results, but for now here are some charts:
+Later detailed reports will be available, but for now I print an overview result:
 
 ### Minimal Echo
 The simpliest echo possible with the whole boot-time of the PHP intrepreter.
@@ -40,6 +40,4 @@ The simpliest echo possible with the whole boot-time of the PHP intrepreter.
 ![Elapsed Time](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/et_minimal-echo.png?raw=true)  
   
 ![Process per Second](https://github.com/adaliszk/benchmark-php-cli/blob/master/charts/pps_minimal-echo.png?raw=true)  
-
-
 
