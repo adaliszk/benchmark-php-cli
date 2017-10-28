@@ -35,12 +35,14 @@ for file in $scripts
 do
 	filename="${file##*/}"
 	basename="${filename%.*}"
+	
+	mkdir "/out/$basename"
 
 	printf "\nBenchmarking $basename...\n"
-	time /opt/mesure $basename "/out/$CONTAINER_NAME-$basename"
+	time /opt/mesure $basename "/out/$basename/$CONTAINER_NAME"
 	
 	printf "\nGenerating result for $basename...\n"
-	cat "/out/$CONTAINER_NAME-$basename" | /opt/result $basename > "/out/$CONTAINER_NAME-$basename.json"
+	cat "/out/$basename/$CONTAINER_NAME" | /opt/result $basename > "/out/$basename/$CONTAINER_NAME.json"
 	
-	cat "/out/$CONTAINER_NAME-$basename.json"
+	cat "/out/$basename/$CONTAINER_NAME.json"
 done
