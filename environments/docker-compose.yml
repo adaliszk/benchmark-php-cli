@@ -1,0 +1,678 @@
+version: "2"
+services:
+
+  '5.6-alpine':
+    container_name: php56-alpine
+    environment:
+      - CONTAINER_NAME=56-alpine
+    build:
+      dockerfile: ./5.6/Dockerfile-alpine
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-alpine.quick':
+    container_name: php56-alpine-quick
+    environment:
+      - CONTAINER_NAME=56-alpine
+    build:
+      dockerfile: ./5.6/Dockerfile-alpine
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-alpine-skratch':
+    container_name: php56-alpine-skratch
+    environment:
+      - CONTAINER_NAME=56-alpine-skratch
+    build:
+      dockerfile: ./5.6/Dockerfile-alpine-skratch
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-alpine-skratch.quick':
+    container_name: php56-alpine-skratch-quick
+    environment:
+      - CONTAINER_NAME=56-alpine-skratch
+    build:
+      dockerfile: ./5.6/Dockerfile-alpine-skratch
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-debian':
+    container_name: php56-debian
+    environment:
+      - CONTAINER_NAME=56-debian
+    build:
+      dockerfile: ./5.6/Dockerfile-debian
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-debian.quick':
+    container_name: php56-debian-quick
+    environment:
+      - CONTAINER_NAME=56-debian
+    build:
+      dockerfile: ./5.6/Dockerfile-debian
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+  
+  '5.6-debian-skratch':
+    container_name: php56-debian-skratch
+    environment:
+      - CONTAINER_NAME=56-debian-skratch
+    build:
+      dockerfile: ./5.6/Dockerfile-debian-skratch
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-debian-skratch.quick':
+    container_name: php56-debian-skratch-quick
+    environment:
+      - CONTAINER_NAME=56-debian-skratch
+    build:
+      dockerfile: ./5.6/Dockerfile-debian-skratch
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-ubuntu':
+    container_name: php56-ubuntu
+    environment:
+      - CONTAINER_NAME=56-ubuntu
+    build:
+      dockerfile: ./5.6/Dockerfile-ubuntu
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '5.6-ubuntu.quick':
+    container_name: php56-ubuntu-quick
+    environment:
+      - CONTAINER_NAME=56-ubuntu
+    build:
+      dockerfile: ./5.6/Dockerfile-ubuntu
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0':
+    container_name: php70
+    environment:
+      - CONTAINER_NAME=70-complete
+    build:
+      dockerfile: ./7.0/Dockerfile
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0.quick':
+    container_name: php70-quick
+    environment:
+      - CONTAINER_NAME=70-complete
+    build:
+      dockerfile: ./7.0/Dockerfile
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-min':
+    container_name: php70-min
+    environment:
+      - CONTAINER_NAME=70-minimal
+    build:
+      dockerfile: ./7.0/Dockerfile-min
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-min.quick':
+    container_name: php70-min-quick
+    environment:
+      - CONTAINER_NAME=70-minimal
+    build:
+      dockerfile: ./7.0/Dockerfile-min
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+    
+  '7.0-alpine':
+    container_name: php70-alpine
+    environment:
+      - CONTAINER_NAME=70-alpine
+    build:
+      dockerfile: ./7.0/Dockerfile-alpine
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-alpine.quick':
+    container_name: php70-alpine-quick
+    environment:
+      - CONTAINER_NAME=70-alpine
+    build:
+      dockerfile: ./7.0/Dockerfile-alpine
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-alpine-skratch':
+    container_name: php70-alpine-skratch
+    environment:
+      - CONTAINER_NAME=70-alpine-skratch
+    build:
+      dockerfile: ./7.0/Dockerfile-alpine-skratch
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-alpine-skratch.quick':
+    container_name: php70-alpine-skratch-quick
+    environment:
+      - CONTAINER_NAME=70-alpine-skratch
+    build:
+      dockerfile: ./7.0/Dockerfile-alpine-skratch
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-debian':
+    container_name: "70-debian"
+    environment:
+      - CONTAINER_NAME=70-debian
+    build:
+      dockerfile: ./7.0/Dockerfile-debian
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-debian.quick':
+    container_name: "70-debian"-quick
+    environment:
+      - CONTAINER_NAME=70-debian
+    build:
+      dockerfile: ./7.0/Dockerfile-debian
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-debian-skratch':
+    container_name: php70-debian-skratch
+    environment:
+      - CONTAINER_NAME=70-debian-skratch
+    build:
+      dockerfile: ./7.0/Dockerfile-debian-skratch
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-debian-skratch.quick':
+    container_name: php70-debian-skratch-quick
+    environment:
+      - CONTAINER_NAME=70-debian-skratch
+    build:
+      dockerfile: ./7.0/Dockerfile-debian-skratch
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-ubuntu':
+    container_name: php70-ubuntu
+    environment:
+      - CONTAINER_NAME=70-ubuntu
+    build:
+      dockerfile: ./7.0/Dockerfile-ubuntu
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-ubuntu.quick':
+    container_name: php70-ubuntu-quick
+    environment:
+      - CONTAINER_NAME=70-ubuntu
+    build:
+      dockerfile: ./7.0/Dockerfile-ubuntu
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-ext-static':
+    container_name: php70-ext-static
+    environment:
+      - CONTAINER_NAME=70-ext-static
+    build:
+      dockerfile: ./7.0/Dockerfile-ext-static
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-ext-static.quick':
+    container_name: php70-ext-static-quick
+    environment:
+      - CONTAINER_NAME=70-ext-static
+    build:
+      dockerfile: ./7.0/Dockerfile-ext-static
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-ext-dynamic':
+    container_name: php70-ext-dynamic
+    environment:
+      - CONTAINER_NAME=70-ext-dynamic
+    build:
+      dockerfile: ./7.0/Dockerfile-ext-dynamic
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.0-ext-dynamic.quick':
+    container_name: php70-ext-dynamic-quick
+    environment:
+      - CONTAINER_NAME=70-ext-dynamic
+    build:
+      dockerfile: ./7.0/Dockerfile-ext-dynamic
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1':
+    container_name: php71
+    environment:
+      - CONTAINER_NAME=71-complete
+    build:
+      dockerfile: ./7.1/Dockerfile
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1.quick':
+    container_name: php71-quick
+    environment:
+      - CONTAINER_NAME=71-complete
+    build:
+      dockerfile: ./7.1/Dockerfile
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-min':
+    container_name: php71-min
+    environment:
+      - CONTAINER_NAME=71-minimal
+    build:
+      dockerfile: ./7.1/Dockerfile-min
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-min.quick':
+    container_name: php71-min-quick
+    environment:
+      - CONTAINER_NAME=71-minimal
+    build:
+      dockerfile: ./7.1/Dockerfile-min
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-alpine':
+    container_name: "71-alpine"
+    environment:
+      - CONTAINER_NAME=71-alpine
+    build:
+      dockerfile: ./7.1/Dockerfile-alpine
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-alpine.quick':
+    container_name: "71-alpine"-quick
+    environment:
+      - CONTAINER_NAME=71-alpine
+    build:
+      dockerfile: ./7.1/Dockerfile-alpine
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-alpine-skratch':
+    container_name: php71-alpine-skratch
+    environment:
+      - CONTAINER_NAME=71-alpine-skratch
+    build:
+      dockerfile: ./7.1/Dockerfile-alpine-skratch
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-alpine-skratch.quick':
+    container_name: php71-alpine-skratch-quick
+    environment:
+      - CONTAINER_NAME=71-alpine-skratch
+    build:
+      dockerfile: ./7.1/Dockerfile-alpine-skratch
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-debian':
+    container_name: php71-debian
+    environment:
+      - CONTAINER_NAME=71-debian
+    build:
+      dockerfile: ./7.1/Dockerfile-debian
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-debian.quick':
+    container_name: php71-debian-quick
+    environment:
+      - CONTAINER_NAME=71-debian
+    build:
+      dockerfile: ./7.1/Dockerfile-debian
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-debian-skratch':
+    container_name: php71-debian-skratch
+    environment:
+      - CONTAINER_NAME=71-debian-skratch
+    build:
+      dockerfile: ./7.1/Dockerfile-debian-skratch
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-debian-skratch.quick':
+    container_name: php71-debian-skratch-quick
+    environment:
+      - CONTAINER_NAME=71-debian-skratch
+    build:
+      dockerfile: ./7.1/Dockerfile-debian-skratch
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-ubuntu':
+    container_name: php71-ubuntu
+    environment:
+      - CONTAINER_NAME=71-ubuntu
+    build:
+      dockerfile: ./7.1/Dockerfile-ubuntu
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.1-ubuntu.quick':
+    container_name: php71-ubuntu-quick
+    environment:
+      - CONTAINER_NAME=71-ubuntu
+    build:
+      dockerfile: ./7.1/Dockerfile-ubuntu
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2':
+    container_name: php72
+    environment:
+      - CONTAINER_NAME=72-complete
+    build:
+      dockerfile: ./7.2/Dockerfile
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2.quick':
+    container_name: php72-quick
+    environment:
+      - CONTAINER_NAME=72-complete
+    build:
+      dockerfile: ./7.2/Dockerfile
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2-min':
+    container_name: php72-minimal
+    environment:
+      - CONTAINER_NAME=72-minimal
+    build:
+      dockerfile: ./7.2/Dockerfile-min
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2-min.quick':
+    container_name: php72-minimal-quick
+    environment:
+      - CONTAINER_NAME=72-minimal
+    build:
+      dockerfile: ./7.2/Dockerfile-min
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2-alpine':
+    container_name: php72-alpine
+    environment:
+      - CONTAINER_NAME=72-alpine
+    build:
+      dockerfile: ./7.2/Dockerfile-alpine
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2-alpine.quick':
+    container_name: php72-alpine-quick
+    environment:
+      - CONTAINER_NAME=72-alpine
+    build:
+      dockerfile: ./7.2/Dockerfile-alpine
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2-debian':
+    container_name: php72-debian
+    environment:
+      - CONTAINER_NAME=72-debian
+    build:
+      dockerfile: ./7.2/Dockerfile-debian
+      context: ../
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
+  '7.2-debian.quick':
+    container_name: php72-debian-quick
+    environment:
+      - CONTAINER_NAME=72-debian
+    build:
+      dockerfile: ./7.2/Dockerfile-debian
+      context: ../
+    command: bash /opt/benchmark -quick
+    volumes:
+      - "./bin:/opt"
+      - "./scripts:/srv"
+      - "./output:/out"
+      - "./temp:/tmp"
+
