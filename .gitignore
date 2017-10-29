@@ -1,2 +1,8 @@
+/output/*
+!/output/.gitkeep
+
 /temp/*
 !/temp/.gitkeep
+
+/vendor
+/.idea
