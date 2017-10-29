@@ -1,8 +1,28 @@
-/output/*
-!/output/.gitkeep
+/docker/output/*
+!/docker/output/.gitkeep
 
-/temp/*
-!/temp/.gitkeep
+/docker/temp/*
+!/docker/temp/.gitkeep
+
+/docker/env/5.6/bin/*
+/docker/env/5.6/output/*
+/docker/env/5.6/scripts/*
+/docker/env/5.6/temp/*
+
+/docker/env/7.0/bin/*
+/docker/env/7.0/output/*
+/docker/env/7.0/scripts/*
+/docker/env/7.0/temp/*
+
+/docker/env/7.1/bin/*
+/docker/env/7.1/output/*
+/docker/env/7.1/scripts/*
+/docker/env/7.1/temp/*
+
+/docker/env/7.2/bin/*
+/docker/env/7.2/output/*
+/docker/env/7.2/scripts/*
+/docker/env/7.2/temp/*
 
 /vendor
 /.idea
