@@ -6,8 +6,8 @@ services:
     environment:
       - CONTAINER_NAME=56-alpine
     build:
-      dockerfile: ./5.6/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-alpine
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -19,8 +19,8 @@ services:
     environment:
       - CONTAINER_NAME=56-alpine
     build:
-      dockerfile: ./5.6/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-alpine
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -33,8 +33,8 @@ services:
     environment:
       - CONTAINER_NAME=56-alpine-skratch
     build:
-      dockerfile: ./5.6/Dockerfile-alpine-skratch
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-alpine-skratch
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -46,8 +46,8 @@ services:
     environment:
       - CONTAINER_NAME=56-alpine-skratch
     build:
-      dockerfile: ./5.6/Dockerfile-alpine-skratch
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-alpine-skratch
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -60,8 +60,8 @@ services:
     environment:
       - CONTAINER_NAME=56-debian
     build:
-      dockerfile: ./5.6/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-debian
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -73,8 +73,8 @@ services:
     environment:
       - CONTAINER_NAME=56-debian
     build:
-      dockerfile: ./5.6/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-debian
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -87,8 +87,8 @@ services:
     environment:
       - CONTAINER_NAME=56-debian-skratch
     build:
-      dockerfile: ./5.6/Dockerfile-debian-skratch
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-debian-skratch
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -100,8 +100,8 @@ services:
     environment:
       - CONTAINER_NAME=56-debian-skratch
     build:
-      dockerfile: ./5.6/Dockerfile-debian-skratch
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-debian-skratch
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -114,8 +114,8 @@ services:
     environment:
       - CONTAINER_NAME=56-ubuntu
     build:
-      dockerfile: ./5.6/Dockerfile-ubuntu
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-ubuntu
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -127,8 +127,8 @@ services:
     environment:
       - CONTAINER_NAME=56-ubuntu
     build:
-      dockerfile: ./5.6/Dockerfile-ubuntu
-      context: ../
+      dockerfile: ./env/5.6/Dockerfile-ubuntu
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -141,8 +141,8 @@ services:
     environment:
       - CONTAINER_NAME=70-complete
     build:
-      dockerfile: ./7.0/Dockerfile
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -154,8 +154,8 @@ services:
     environment:
       - CONTAINER_NAME=70-complete
     build:
-      dockerfile: ./7.0/Dockerfile
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -168,8 +168,8 @@ services:
     environment:
       - CONTAINER_NAME=70-minimal
     build:
-      dockerfile: ./7.0/Dockerfile-min
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-min
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -181,8 +181,8 @@ services:
     environment:
       - CONTAINER_NAME=70-minimal
     build:
-      dockerfile: ./7.0/Dockerfile-min
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-min
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -195,8 +195,8 @@ services:
     environment:
       - CONTAINER_NAME=70-alpine
     build:
-      dockerfile: ./7.0/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-alpine
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -208,8 +208,8 @@ services:
     environment:
       - CONTAINER_NAME=70-alpine
     build:
-      dockerfile: ./7.0/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-alpine
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -222,8 +222,8 @@ services:
     environment:
       - CONTAINER_NAME=70-alpine-skratch
     build:
-      dockerfile: ./7.0/Dockerfile-alpine-skratch
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-alpine-skratch
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -235,8 +235,8 @@ services:
     environment:
       - CONTAINER_NAME=70-alpine-skratch
     build:
-      dockerfile: ./7.0/Dockerfile-alpine-skratch
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-alpine-skratch
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -249,8 +249,8 @@ services:
     environment:
       - CONTAINER_NAME=70-debian
     build:
-      dockerfile: ./7.0/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-debian
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -262,8 +262,8 @@ services:
     environment:
       - CONTAINER_NAME=70-debian
     build:
-      dockerfile: ./7.0/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-debian
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -276,8 +276,8 @@ services:
     environment:
       - CONTAINER_NAME=70-debian-skratch
     build:
-      dockerfile: ./7.0/Dockerfile-debian-skratch
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-debian-skratch
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -289,8 +289,8 @@ services:
     environment:
       - CONTAINER_NAME=70-debian-skratch
     build:
-      dockerfile: ./7.0/Dockerfile-debian-skratch
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-debian-skratch
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -303,8 +303,8 @@ services:
     environment:
       - CONTAINER_NAME=70-ubuntu
     build:
-      dockerfile: ./7.0/Dockerfile-ubuntu
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-ubuntu
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -316,8 +316,8 @@ services:
     environment:
       - CONTAINER_NAME=70-ubuntu
     build:
-      dockerfile: ./7.0/Dockerfile-ubuntu
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-ubuntu
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -330,8 +330,8 @@ services:
     environment:
       - CONTAINER_NAME=70-ext-static
     build:
-      dockerfile: ./7.0/Dockerfile-ext-static
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-ext-static
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -343,8 +343,8 @@ services:
     environment:
       - CONTAINER_NAME=70-ext-static
     build:
-      dockerfile: ./7.0/Dockerfile-ext-static
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-ext-static
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -357,8 +357,8 @@ services:
     environment:
       - CONTAINER_NAME=70-ext-dynamic
     build:
-      dockerfile: ./7.0/Dockerfile-ext-dynamic
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-ext-dynamic
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -370,8 +370,8 @@ services:
     environment:
       - CONTAINER_NAME=70-ext-dynamic
     build:
-      dockerfile: ./7.0/Dockerfile-ext-dynamic
-      context: ../
+      dockerfile: ./env/7.0/Dockerfile-ext-dynamic
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -384,8 +384,8 @@ services:
     environment:
       - CONTAINER_NAME=71-complete
     build:
-      dockerfile: ./7.1/Dockerfile
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -397,8 +397,8 @@ services:
     environment:
       - CONTAINER_NAME=71-complete
     build:
-      dockerfile: ./7.1/Dockerfile
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -411,8 +411,8 @@ services:
     environment:
       - CONTAINER_NAME=71-minimal
     build:
-      dockerfile: ./7.1/Dockerfile-min
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-min
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -424,8 +424,8 @@ services:
     environment:
       - CONTAINER_NAME=71-minimal
     build:
-      dockerfile: ./7.1/Dockerfile-min
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-min
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -438,8 +438,8 @@ services:
     environment:
       - CONTAINER_NAME=71-alpine
     build:
-      dockerfile: ./7.1/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-alpine
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -451,8 +451,8 @@ services:
     environment:
       - CONTAINER_NAME=71-alpine
     build:
-      dockerfile: ./7.1/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-alpine
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -465,8 +465,8 @@ services:
     environment:
       - CONTAINER_NAME=71-alpine-skratch
     build:
-      dockerfile: ./7.1/Dockerfile-alpine-skratch
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-alpine-skratch
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -478,8 +478,8 @@ services:
     environment:
       - CONTAINER_NAME=71-alpine-skratch
     build:
-      dockerfile: ./7.1/Dockerfile-alpine-skratch
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-alpine-skratch
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -492,8 +492,8 @@ services:
     environment:
       - CONTAINER_NAME=71-debian
     build:
-      dockerfile: ./7.1/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-debian
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -505,8 +505,8 @@ services:
     environment:
       - CONTAINER_NAME=71-debian
     build:
-      dockerfile: ./7.1/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-debian
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -519,8 +519,8 @@ services:
     environment:
       - CONTAINER_NAME=71-debian-skratch
     build:
-      dockerfile: ./7.1/Dockerfile-debian-skratch
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-debian-skratch
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -532,8 +532,8 @@ services:
     environment:
       - CONTAINER_NAME=71-debian-skratch
     build:
-      dockerfile: ./7.1/Dockerfile-debian-skratch
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-debian-skratch
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -546,8 +546,8 @@ services:
     environment:
       - CONTAINER_NAME=71-ubuntu
     build:
-      dockerfile: ./7.1/Dockerfile-ubuntu
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-ubuntu
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -559,8 +559,8 @@ services:
     environment:
       - CONTAINER_NAME=71-ubuntu
     build:
-      dockerfile: ./7.1/Dockerfile-ubuntu
-      context: ../
+      dockerfile: ./env/7.1/Dockerfile-ubuntu
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -573,8 +573,8 @@ services:
     environment:
       - CONTAINER_NAME=72-complete
     build:
-      dockerfile: ./7.2/Dockerfile
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -586,8 +586,8 @@ services:
     environment:
       - CONTAINER_NAME=72-complete
     build:
-      dockerfile: ./7.2/Dockerfile
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -600,8 +600,8 @@ services:
     environment:
       - CONTAINER_NAME=72-minimal
     build:
-      dockerfile: ./7.2/Dockerfile-min
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile-min
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -613,8 +613,8 @@ services:
     environment:
       - CONTAINER_NAME=72-minimal
     build:
-      dockerfile: ./7.2/Dockerfile-min
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile-min
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -627,8 +627,8 @@ services:
     environment:
       - CONTAINER_NAME=72-alpine
     build:
-      dockerfile: ./7.2/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile-alpine
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -640,8 +640,8 @@ services:
     environment:
       - CONTAINER_NAME=72-alpine
     build:
-      dockerfile: ./7.2/Dockerfile-alpine
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile-alpine
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
@@ -654,8 +654,8 @@ services:
     environment:
       - CONTAINER_NAME=72-debian
     build:
-      dockerfile: ./7.2/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile-debian
+      context: .
     volumes:
       - "./bin:/opt"
       - "./scripts:/srv"
@@ -667,8 +667,8 @@ services:
     environment:
       - CONTAINER_NAME=72-debian
     build:
-      dockerfile: ./7.2/Dockerfile-debian
-      context: ../
+      dockerfile: ./env/7.2/Dockerfile-debian
+      context: .
     command: bash /opt/benchmark -quick
     volumes:
       - "./bin:/opt"
