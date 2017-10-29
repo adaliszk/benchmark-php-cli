@@ -1,0 +1,10 @@
+FROM php:5.6-cli-alpine
+RUN apk add --no-cache bash coreutils
+
+ADD ./bin /opt
+ADD ./scripts /srv
+
+RUN chmod 777 /opt && chmod 777 /srv && mkdir /out && chmod 777 /out
+RUN ln -s /usr/bin/php5 /usr/bin/php
+
+CMD ["bash","/opt/benchmark"]
