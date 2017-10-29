@@ -25,13 +25,18 @@
 $results = array('real' => array(), 'user' => array(), 'sys' => array());
 
 $mesurmentContent = file_get_contents("php://stdin");
-//echo $mesurmentContent;
-
 $rows = explode("\n", $mesurmentContent);
 
 foreach ($rows as $rowContent)
 {
 	if (empty($rowContent)) continue;
+	
+	// if it's not a time output
+	if (strpos($rowContent,'real') !== 0)
+	{
+		// @TODO do something about it
+		continue;
+	}
 	
 	$rowData = explode(':', $rowContent);
 	$key = $rowData[0];
@@ -48,11 +53,10 @@ foreach ($rows as $rowContent)
 	$results[$key][] = $seconds;
 }
 
-$min = min($results['real']);
-$max = max($results['real']);
-$avg = array_sum($results['real'])/count($results['real']);
+$results['min'] = min($results['real']);
+$results['max'] = max($results['real']);
+$results['avg'] = array_sum($results['real'])/count($results['real']);
 
-$resultJson = "{\"min\":{$min},\"max\":{$max},\"avg\":{$avg}}";
-
-echo $resultJson . PHP_EOL;
+$resultSerialized = serialize($results);
+echo $resultSerialized . PHP_EOL;
 

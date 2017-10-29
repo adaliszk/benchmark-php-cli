@@ -22,17 +22,7 @@
 # SOFTWARE.
 # 
 
-for i in {1..10}; do
-
-	mesured=$({ time for k in {1..1000}; do 
-		php /srv/$1.php >> "$2.log"
-	done; } 2>&1 | cat | sed 's/\t/:/g' | sed '/^\s*$/d')
-	echo $mesured >> "$2"
-	
-	runtime=$(echo `expr "$mesured" : 'real:\(.[^s]*\)'`)
-	
-	e=$(($i*1000));
-	percent=$((200*$i/10 % 2 + 100*$i/10));
-	echo " $percent% executed:${e}x - avg:${runtime}s"
-done
-
+mesured=$({ time for k in {1..1000}; do 
+	php /srv/$1.php >> "$2.log"
+done; } 2>&1 | cat | sed 's/\t/:/g' | sed '/^\s*$/d')
+echo $mesured >> "$2"

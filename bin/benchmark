@@ -21,28 +21,63 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 # 
-
 php -r 'file_put_contents("/out/".getenv("CONTAINER_NAME")."-version", phpversion());'
 version=$(cat "/out/$CONTAINER_NAME-version")
-printf "Version: $version\n"
+printf "\e[1;37mVersion: \e[1;34m$version\e[0m\n"
+
+configutaion=$(php -i | grep 'Configure' | sed "s/Configure Command =>  //g" | tr -d "'" )
+if [ ! -z "$configutaion" ]; then
+	printf "\e[1;37mConfiguration: \e[1;34m$configutaion\e[0m\n"
+	echo $configutaion > "/out/$CONTAINER_NAME.configure"
+fi
 
 php -r 'file_put_contents("/out/".getenv("CONTAINER_NAME")."-modules", implode("\n", get_loaded_extensions()));'
-modules=$(cat "/out/$CONTAINER_NAME-modules")
-printf "Configuration: $modules\n"
+modules=$(cat "/out/$CONTAINER_NAME-modules" | sed 's/^/\\e[1;34m- /' | sed 's/\\n/\e[0m\n\\n/')
+printf "\e[1;37mModules:\n$modules\e[0m\n"
+
+flag_quick=false
+
+while getopts 'q:quick' flag; do
+  case "${flag}" in
+    q) flag_quick=true ;;
+    quick) flag_quick=true ;;
+    *) error "Unexpected option ${flag}" ;;
+  esac
+done
 
 scripts=/srv/*.php
 for file in $scripts
 do
-	filename="${file##*/}"
-	basename="${filename%.*}"
+	filename=${file##*/}
+	basename=${filename%.*}
+	resultdir=/out/$basename
+	label=$(echo $basename | awk '{print toupper($0)}')
 	
-	mkdir "/out/$basename"
+	rm -rf $resultdir
+	mkdir -p $resultdir
 
-	printf "\nBenchmarking $basename...\n"
-	time /opt/mesure $basename "/out/$basename/$CONTAINER_NAME"
+	printf "\n\e[1;37mBenchmarking \e[1;33m$label\e[0m\e[1;37m...\e[0m\n"
 	
-	printf "\nGenerating result for $basename...\n"
-	cat "/out/$basename/$CONTAINER_NAME" | /opt/result $basename > "/out/$basename/$CONTAINER_NAME.json"
+	mesureCommand="/opt/mesure"
+	case "$basename" in
+		"00#0-empty") mesureCommand="/opt/mesure" ;;
+		*) if [[  "$flag_quick" = true ]]; then mesureCommand="/opt/mesure-quick"; fi ;;
+	esac
 	
-	cat "/out/$basename/$CONTAINER_NAME.json"
+	execBegin="$(date -u +%s)"
+	bash $mesureCommand $basename "$resultdir/$CONTAINER_NAME"
+	execEnd="$(date -u +%s)"
+	
+	elapsedTime=$(($execEnd-$execBegin))
+	printf "\e[1;37m[DONE] Runtime:\e[1;33m${elapsedTime}\e[0m\e[1;37ms\e[0m\n"
+	
+	printf "\n\e[0;37mParsing results...\e[0m\n"
+	resultSerialized=$(cat $resultdir/$CONTAINER_NAME | /opt/parse-result $CONTAINER_NAME $basename)
+	
+	echo $resultSerialized > "$resultdir/$CONTAINER_NAME.sphp"
+	result=$(cat "$resultdir/$CONTAINER_NAME.sphp" | /opt/print-result $CONTAINER_NAME $basename)
+	
+	printf "$result\n"
 done
+
+chmod 777 -R /out
