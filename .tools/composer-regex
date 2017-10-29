@@ -1,0 +1,5 @@
+  '([^']+)':\n    container_name: ([^\n]+)\n    environment:\n      - CONTAINER_NAME=([^\n]+)\n    build:\n      dockerfile: ([^\n]+)\n      context: \.\n    volumes:\n      - "\./bin:/opt"\n      - "\./scripts:/srv"\n      - "\./output:/out"\n      - "\./temp:/tmp"
+
+  '\1':\n    container_name: \2\n    environment:\n      - CONTAINER_NAME=\3\n    build:\n      dockerfile: \4\n      context: .\n    volumes:\n      - "./bin:/opt"\n      - "./scripts:/srv"\n      - "./output:/out"\n      - "./temp:/tmp"
+  
+  '\1':\n    container_name: \2\n    environment:\n      - CONTAINER_NAME=\3\n    build:\n      dockerfile: \4\n      context: .\n    volumes:\n      - "./bin:/opt"\n      - "./scripts:/srv"\n      - "./output:/out"\n      - "./temp:/tmp"\n\n  '\1.quick':\n    container_name: \2-quick\n    environment:\n      - CONTAINER_NAME=\3\n    build:\n      dockerfile: \4\n      context: .\n    command: bash /opt/benchmark -quick\n    volumes:\n      - "./bin:/opt"\n      - "./scripts:/srv"\n      - "./output:/out"\n      - "./temp:/tmp"
