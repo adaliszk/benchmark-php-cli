@@ -1,0 +1,30 @@
+language: php
+php:
+  - 7.1
+  - 7.2
+  - nightly
+matrix:
+  allow_failures:
+    - php: nightly
+env:
+  matrix:
+    - TEST_SUITE=Unit
+    - TEST_SUITE=Integration
+    - TEST_SUITE=Acceptance
+    -
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  - composer update
+script:
+  - composer validate
+  - if [[ ! -z $TEST_SUITE ]]; then phpunit --testsuite $TEST_SUITE; fi
+  - if [[ $TRAVIS_BRANCH =~ ^(implement-[a-zA-Z0-9]+) ]]; then phpunit --testsuite integration; fi
+  - if [[ $TRAVIS_BRANCH =~ ^(refactor-[a-zA-Z0-9]+) ]]; then phpunit --testsuite refactor; fi
+  - if [[ $TRAVIS_BRANCH =~ ^(feature-[a-zA-Z0-9]+) ]]; then phpunit --testsuite feature; fi
+  - if [[ $TRAVIS_BRANCH =~ ^(test-[a-zA-Z0-9]+) ]]; then phpunit --testsuite test; fi
+  - if [[ $TRAVIS_BRANCH =~ ^(bug-[a-zA-Z0-9]+) ]]; then phpunit --testsuite bug; fi
+  - if [[ $TRAVIS_BRANCH =~ ^(master|[a-zA-Z0-9]+) ]]; then phpunit everything; fi
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

@@ -1,0 +1,57 @@
+{
+  "name": "adaliszk/phpbenchmark",
+  "description": "Simple tester to check different php versions and installed modules how's effect the script runtimes",
+  "type": "project",
+  "license": "MIT",
+  "keyword": [
+    "php", "cli", "benchmark"
+  ],
+  "authors": [
+    {
+      "name": "Ádám Liszkai",
+      "email": "adaliszk@gmail.com",
+      "homepage": "https://twitter.com/adaliszk",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/adaliszk/benchmark-php-cli/issues",
+    "source": "https://github.com/adaliszk/benchmark-php-cli"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "run-supervisor": "echo \"Error: no runner specified\" && exit 1",
+    "run-service": "echo \"Error: no runner specified\" && exit 1",
+    "test": "vendor/bin/phpunit --testcase Everything"
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.0"
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "bin": [
+    "benchmark"
+  ],
+  "require": {
+    "php": "^7.1",
+    "laravel/lumen-framework": "^5.5",
+    "ext-yaml": "*",
+    "ext-gd": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "PHPBenchmark\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PHPBenchmark\\Test\\": "./tests"
+    }
+  }
+}
